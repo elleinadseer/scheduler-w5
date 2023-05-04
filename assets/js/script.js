@@ -15,6 +15,24 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+
+  var now = dayjs()
+  $('#currentDay').text(now.format('dddd, MMMM d'));
+
+  $('#currentDay2').text(dayjs().hour(2).isAfter(dayjs(now)));
+
+  if (dayjs().hour(12).isAfter(dayjs(now)))
+  if (dayjs().hour(12).isSame(dayjs(now)))
+  if (dayjs().hour(12).isBefore(dayjs(now)))
+
+  dayjs().hour(12)
+
+  // Add HTML / styling
+
+  
+
+
+
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id

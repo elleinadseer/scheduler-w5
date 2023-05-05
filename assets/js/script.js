@@ -8,21 +8,49 @@
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page.
+
+  $(document).ready(function() {
+
+      // TODO: Add code to display the current date in the header of the page.
+    var now = dayjs()
+    $('#currentDay').text(now.format('dddd, MMMM d'));
 
 
-  // Displays current date on page
-  var now = dayjs()
-  $('#currentDay').text(now.format('dddd, MMMM d'));
+      // TODO: Add code to apply the past, present, or future class to each time
+  // block by comparing the id to the current hour. HINTS: How can the id
+  // attribute of each time-block be used to conditionally add or remove the
+  // past, present, and future classes? How can Day.js be used to get the
+  // current hour in 24-hour time?
+
+  function checkHour() {
+  
+    // Checks through each .time-block class and turns every ID (number written in string) into an integer using parseInt
+    // This is stored in a variable named idInt
+    $('.time-block').each(function () {
+    var idInt = parseInt($(this).attr('id'));
+
+    // Stores current hour in 'hour' variable to compare to idInt
+    var hour = dayjs().hour();
+  
+    // Adds classes to idInt using (this) when the integer is compared to the integer in 'hour'
+    if (idInt < hour) {
+      $(this).addClass('past');
+    } else if (idInt === hour) {
+      $(this).addClass('present');
+    } else {
+    $(this).addClass('future');
+    }
+  });
+  }
+
+checkHour();
+
+  });
 
 
+  

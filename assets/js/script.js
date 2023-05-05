@@ -1,25 +1,13 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
 
+// The .ready() function will execute this code after the DOM is ready
   $(document).ready(function() {
 
       // TODO: Add code to display the current date in the header of the page.
     var now = dayjs()
     $('#currentDay').text(now.format('dddd, MMMM d'));
-
 
       // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -49,6 +37,43 @@
   }
 
 checkHour();
+
+  // TODO: Add a listener for click events on the save button. This code should
+  // use the id in the containing time-block as a key to save the user input in
+  // local storage. HINT: What does `this` reference in the click listener
+  // function? How can DOM traversal be used to get the "hour-x" id of the
+  // time-block containing the button that was clicked? How might the id be
+  // useful when saving the description in local storage?
+
+// Registers a click event on the .saveBtn class buttons
+$('.saveBtn').on('click', function () {
+
+  // Using (this) we can navigate to the ID's (via the .attr method) and get .description values
+  // We do this so that we know what description was saved in which ID
+  var theID = $(this).parent().attr('id');
+  var msg = $(this).siblings('.description').val();
+
+  // Save to local storage
+localStorage.setItem(theID, msg);
+});
+
+
+  // TODO: Add code to get any user input that was saved in localStorage and set
+  // the values of the corresponding textarea elements. HINT: How can the id
+  // attribute of each time-block be used to do this?
+
+  // Retrieves information from the localStorage
+  // Inserts localStorage items into the value of the various descriptions
+
+$('#9 .description').val(localStorage.getItem('9'));
+$('#10 .description').val(localStorage.getItem('10'));
+$('#11 .description').val(localStorage.getItem('11'));
+$('#12 .description').val(localStorage.getItem('12'));
+$('#13 .description').val(localStorage.getItem('13'));
+$('#14 .description').val(localStorage.getItem('14'));
+$('#15 .description').val(localStorage.getItem('15'));
+$('#16 .description').val(localStorage.getItem('16'));
+$('#17 .description').val(localStorage.getItem('17'));
 
   });
 

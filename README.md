@@ -1,5 +1,5 @@
 # scheduler-w5
-Work Day Scheduler
+## Description
 
 Add the current day to be displayed at the top of the calendar
 Each time block should be colour coded to indicate whether it is in the past, present of future
@@ -7,49 +7,26 @@ When clicking on a time block I can enter an event
 When I click the save button for that time block the text for that event is saved in local storage
 When refreshing the page the saved events should persist
 
-HTML Notes:
+## Links
 
-      <!-- Use class for "past", "present", and "future" to apply styles to the
-        time-block divs accordingly. The javascript will need to do this by
-        adding/removing these classes on each div by comparing the hour in the
-        id to the current hour. The html provided below is meant to be an example
-        demonstrating how the css provided can be leveraged to create the
-        desired layout and colors. The html below should be removed or updated
-        in the finished product. Remember to delete this comment once the
-        code is implemented.
-        -->
+Link to deployed website:
+https://elleinadseer.github.io/scheduler-w5
 
-      <!-- Example of a past time block. The "past" class adds a gray background color. -->
+Link to GitHub repo: 
+https://github.com/elleinadseer/scheduler-w5
 
-            <!-- Example of a present time block. The "present" class adds a red background color. -->
+## Development
 
-      <!-- Example of a future time block. The "future" class adds a green background color. -->
+I struggled with this task a lot. The CSS side of things was easy to complete; however the aspects involving local storage and array usage were things I really struggled with. I will have to read more into the subjects to increase my fluency with these ideas. I wanted to make the website look as close to the example provided, while I recognise it was not a requirement, but I had to remove certain features of the original as I couldn't work out how to implement the clear highscores function. I find this regretful and want to work harder to overcome this. 
 
+## Usage
 
-JS Notes: 
+![Screenshot 2023-05-02 at 11 37 22 pm](https://user-images.githubusercontent.com/126515415/235800447-46bb7fa8-745f-4a39-8a26-23f358519573.png)
 
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+## Credits
 
-$(function () {
+I have heavily relied on information taught through the module 5 lessons of the bootcamp; copying and then editing code from the lessons of this module to fit my needs. I also did some googling to receive information that I did not use heavily enough to require attribution. 
 
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-});
+## License
+
+MIT license was used for this repository. 

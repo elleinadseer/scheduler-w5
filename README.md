@@ -17,7 +17,7 @@ This task when a lot more smoothly than the last task - it was easier to weave t
 
 ## Usage
 
-![Screenshot 2023-05-02 at 11 37 22 pm](https://user-images.githubusercontent.com/126515415/235800447-46bb7fa8-745f-4a39-8a26-23f358519573.png)
+![image](https://user-images.githubusercontent.com/126515415/236970042-be2b4278-1693-4d53-a231-1552fe292b4b.png)
 
 ## Credits
 

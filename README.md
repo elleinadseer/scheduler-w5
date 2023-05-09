@@ -1,11 +1,7 @@
 # scheduler-w5
 ## Description
 
-Add the current day to be displayed at the top of the calendar
-Each time block should be colour coded to indicate whether it is in the past, present of future
-When clicking on a time block I can enter an event
-When I click the save button for that time block the text for that event is saved in local storage
-When refreshing the page the saved events should persist
+I have been tasked to create a simple calendar application that allows a user to save events for each hour of the day - I have utilised jQuery and the day.js library in order to do this. The time blocks change colour dependent on the time of day (which is informed by referring to day.js) and hour-specific messages are saved to and redeemed from local storage.
 
 ## Links
 
@@ -17,7 +13,7 @@ https://github.com/elleinadseer/scheduler-w5
 
 ## Development
 
-I struggled with this task a lot. The CSS side of things was easy to complete; however the aspects involving local storage and array usage were things I really struggled with. I will have to read more into the subjects to increase my fluency with these ideas. I wanted to make the website look as close to the example provided, while I recognise it was not a requirement, but I had to remove certain features of the original as I couldn't work out how to implement the clear highscores function. I find this regretful and want to work harder to overcome this. 
+This task when a lot more smoothly than the last task - it was easier to weave together the logic of jQuery, day.js and local storage, I feel my understanding of these subjects is increasing but more specific intricacies like parseInt and this were complex. I especially want to gain a better understanding of this - while I believe I utilised it correctly in this task I'd like to feel more confident in my usage.
 
 ## Usage
 
